@@ -189,6 +189,7 @@ lib LibNCurses
   # Input
   fun notimeout(w : Window, bf : Bool) : Result
   fun wgetch(w : Window) : LibC::Int
+  fun wtimeout(w : Window, delay : Int32)
 
   # Output
   fun werase(w : Window) : Result

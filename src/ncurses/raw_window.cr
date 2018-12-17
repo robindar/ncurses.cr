@@ -38,6 +38,10 @@ module NCurses
       check_error(LibNCurses.curs_set(value), "curs_set")
     end
 
+    def timeout(delay : Int)
+      LibNCurses.wtimeout(raw_win, delay)
+    end
+
     private def to_chtype(x : Char | Attribute | Int)
       case x
       when Char
