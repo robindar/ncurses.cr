@@ -83,6 +83,4 @@ module NCurses
   def curses_version
     String.new(LibNCurses.curses_version)
   end
-
 end
-
