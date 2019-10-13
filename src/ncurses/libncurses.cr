@@ -1,4 +1,4 @@
-@[Link("ncursesw")]
+@[Link(ldflags: "#{__DIR__}/acs_bindings.c -lncursesw")]
 lib LibNCurses
   type Window = Void*
   type Screen = Void*
@@ -243,4 +243,38 @@ lib LibNCurses
 
   # for multibyte char...
   fun setlocale(category : LibC::Int, locale : Pointer(LibC::Char))
+
+  # ACS chars
+  fun ACS_ULCORNER = acs_ulcorner : Chtype
+  fun ACS_LLCORNER = acs_llcorner : Chtype
+  fun ACS_URCORNER = acs_urcorner : Chtype
+  fun ACS_LRCORNER = acs_lrcorner : Chtype
+  fun ACS_LTEE     = acs_ltee     : Chtype
+  fun ACS_RTEE     = acs_rtee     : Chtype
+  fun ACS_BTEE     = acs_btee     : Chtype
+  fun ACS_TTEE     = acs_ttee     : Chtype
+  fun ACS_HLINE    = acs_hline    : Chtype
+  fun ACS_VLINE    = acs_vline    : Chtype
+  fun ACS_PLUS     = acs_plus     : Chtype
+  fun ACS_S1       = acs_s1       : Chtype
+  fun ACS_S3       = acs_s3       : Chtype
+  fun ACS_S7       = acs_s7       : Chtype
+  fun ACS_S9       = acs_s9       : Chtype
+  fun ACS_DIAMOND  = acs_diamond  : Chtype
+  fun ACS_CKBOARD  = acs_ckboard  : Chtype
+  fun ACS_DEGREE   = acs_degree   : Chtype
+  fun ACS_PLMINUS  = acs_plminus  : Chtype
+  fun ACS_BULLET   = acs_bullet   : Chtype
+  fun ACS_LARROW   = acs_larrow   : Chtype
+  fun ACS_RARROW   = acs_rarrow   : Chtype
+  fun ACS_DARROW   = acs_darrow   : Chtype
+  fun ACS_UARROW   = acs_uarrow   : Chtype
+  fun ACS_BOARD    = acs_board    : Chtype
+  fun ACS_LANTERN  = acs_lantern  : Chtype
+  fun ACS_BLOCK    = acs_block    : Chtype
+  fun ACS_LEQUAL   = acs_lequal   : Chtype
+  fun ACS_GEQUAL   = acs_gequal   : Chtype
+  fun ACS_PI       = acs_pi       : Chtype
+  fun ACS_NEQUAL   = acs_nequal   : Chtype
+  fun ACS_STERLING = acs_sterling : Chtype
 end

@@ -53,11 +53,11 @@ module NCurses
       end
     end
 
-    private def addch(ch : LibNCurses::Chtype)
+    def addch(ch : LibNCurses::Chtype)
       check_error(LibNCurses.waddch(raw_win, ch), "waddch")
     end
 
-    private def mvaddch(y, x, ch : LibNCurses::Chtype)
+    def mvaddch(y, x, ch : LibNCurses::Chtype)
       check_error(LibNCurses.mvwaddch(raw_win, y, x, ch), "mvwaddch")
     end
 
