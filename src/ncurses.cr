@@ -76,6 +76,7 @@ module NCurses
   delegate attron, to: stdscr
   delegate bkgd, to: stdscr
   delegate timeout, to: stdscr
+  delegate getyx, to: stdscr
 
   def longname
     String.new(LibNCurses.longname)

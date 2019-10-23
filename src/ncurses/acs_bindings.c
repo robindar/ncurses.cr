@@ -1,5 +1,9 @@
 #include <ncurses.h>
 
+void fun_getyx(WINDOW *w, int *y, int *x) {
+  getyx(w, *y, *x);
+}
+
 chtype acs_ulcorner() { return ACS_ULCORNER; }
 chtype acs_llcorner() { return ACS_LLCORNER; }
 chtype acs_urcorner() { return ACS_URCORNER; }

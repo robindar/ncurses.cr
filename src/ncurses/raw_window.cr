@@ -42,6 +42,12 @@ module NCurses
       LibNCurses.wtimeout(raw_win, delay)
     end
 
+    def getyx : { Int32, Int32 }
+      y, x = 0, 0
+      LibNCurses.fun_getyx(raw_win, pointerof(y), pointerof(x))
+      { y, x }
+    end
+
     private def to_chtype(x : Char | Attribute | Int)
       case x
       when Char

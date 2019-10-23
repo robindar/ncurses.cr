@@ -229,6 +229,8 @@ lib LibNCurses
   fun getmaxy(w : Window) : LibC::Int
   fun wresize(w : Window, height : LibC::Int, width : LibC::Int) : Result
 
+  fun fun_getyx(w : Window, y : Pointer(LibC::Int), x : Pointer(LibC::Int))
+
   fun delwin(w : Window)
 
   # Attribute
