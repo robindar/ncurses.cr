@@ -1,7 +1,10 @@
 name: ncurses
-version: 0.1.0
+version: 0.2.0
 
 authors:
   - Naomichi Agata <agatan039@gmail.com>
+  - David A. R. Robin <david.a.r.robin@gmail.com>
 
 license: MIT
+
+crystal: '>= 0.35.0'
